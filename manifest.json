@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Bili Turbo（B站海外加速）",
+  "version": "1.0.0",
+  "description": "B站视频分块并发下载、对冲请求、预读缓存，并把慢的海外 CDN 切换到更快的镜像。",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.bilibili.com/video/*",
+        "https://www.bilibili.com/bangumi/play/*",
+        "https://www.bilibili.com/list/*",
+        "https://www.bilibili.com/festival/*",
+        "https://www.bilibili.com/cheese/play/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": false
+    }
+  ]
+}
